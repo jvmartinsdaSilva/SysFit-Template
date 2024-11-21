@@ -16,7 +16,7 @@ while True:
     exibir_menu()
     opc = ler_inteiro("Opção: ")
     #navegabilidade
-    if (opc == 1):
+    if (opc == 1): #Função para cadastro de alunos
         aluno = cadastro_aluno(id)
         alunos.append(aluno)
         id += 1
@@ -31,7 +31,7 @@ while True:
         #exibe uma lista com todos os alunos filtrados por imc
         pass
     elif (opc == 5):
-        salvar_alunos_em_arquivo(alunos)
+        salvar_alunos(alunos)
         break
     else:
         print("Opção inválida!")

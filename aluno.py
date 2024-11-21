@@ -1,4 +1,5 @@
 from entrada import *
+from gerenciadorJSON import *
 
 # Coleta os dados de um aluno, e os armazena em forma de dicionário
 def cadastro_aluno(id):
@@ -22,3 +23,7 @@ def cadastro_aluno(id):
     return aluno
 
 
+def salvar_alunos(novos_alunos):
+    alunos_salvos = buscar_todos_alunos_em_arquivo() # Busca se já existem alunos salvos
+    alunos = alunos_salvos + novos_alunos # Junta os alunos antigos com os novos
+    salvar_alunos_em_arquivo(alunos)
