@@ -21,8 +21,8 @@ while True:
         alunos.append(aluno)
         id += 1
         pass
-    elif (opc == 2):
-        #função imprime todos os alunos em tela
+    elif (opc == 2): # Mostra todos alunos na tela
+        mostrar_alunos(buscar_todos_alunos_em_arquivo())
         pass
     elif (opc == 3):
         #busca um aluno por id e apresenta seus dados se existir

@@ -22,8 +22,11 @@ def cadastro_aluno(id):
     print(aluno)
     return aluno
 
+def mostrar_alunos(alunos):
+    for aluno in alunos:
+        print(aluno)
 
-def salvar_alunos(novos_alunos):
+def salvar_alunos(alunos):
     alunos_salvos = buscar_todos_alunos_em_arquivo() # Busca se já existem alunos salvos
-    alunos = alunos_salvos + novos_alunos # Junta os alunos antigos com os novos
-    salvar_alunos_em_arquivo(alunos)
+    novos_alunos = alunos_salvos + alunos # Junta os alunos antigos com os novos
+    salvar_alunos_em_arquivo(novos_alunos)
