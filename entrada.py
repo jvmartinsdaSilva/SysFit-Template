@@ -46,3 +46,13 @@ def ler_real(msg = "", pos = False):
           print("Entrada de dados em formato inválido! Digite novamente:")
     except:
       print("Entrada de dados em formato inválido! Digite novamente:")
+
+def validar_string(msg = "", leng = 0):
+    # Realiza a leitura de uma string, validando possível erros.
+    # msg = Mensagem a ser exibida antes da leitura. Por padrão "" (vazia)
+    # leng = Tamanho minímo da String a ser aceita. Por padrão 0
+
+    while True:
+      str = input(msg)
+      if(len(str) >= leng): return str 
+      else: print(f"A quantidade minima de caracteres deve ser {leng}")
