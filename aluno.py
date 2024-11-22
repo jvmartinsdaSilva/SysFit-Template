@@ -30,3 +30,10 @@ def salvar_alunos(alunos):
     alunos_salvos = buscar_todos_alunos_em_arquivo() # Busca se já existem alunos salvos
     novos_alunos = alunos_salvos + alunos # Junta os alunos antigos com os novos
     salvar_alunos_em_arquivo(novos_alunos)
+
+def buscar_id_ultimo_aluno(alunos):
+    try:
+        ultimo_aluno = alunos[-1]
+        return (ultimo_aluno['id'] + 1) #Se Houver alunos , retorna o id do ultimo aluno + 1 (Próximo id)
+    except:
+        return 1 #Se não houver alunos salvos , retorna 1 (Primeiro Aluno)

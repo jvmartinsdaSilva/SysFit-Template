@@ -4,7 +4,7 @@ from navegabilidade import *
 from gerenciadorJSON import *
 
 #variáveis de controle dos dados na memória
-id = 1
+id = buscar_id_ultimo_aluno(buscar_todos_alunos_em_arquivo())
 """ número do id de autoincremento
 """
 alunos = []
@@ -24,8 +24,7 @@ while True:
     elif (opc == 2): # Mostra todos alunos na tela
         mostrar_alunos(buscar_todos_alunos_em_arquivo())
         pass
-    elif (opc == 3):
-        #busca um aluno por id e apresenta seus dados se existir
+    elif (opc == 3): #busca um aluno por id e apresenta seus dados se existir
         pass
     elif (opc == 4):
         #exibe uma lista com todos os alunos filtrados por imc
