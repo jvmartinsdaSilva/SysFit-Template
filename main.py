@@ -25,6 +25,8 @@ while True:
         mostrar_alunos(buscar_todos_alunos_em_arquivo())
         pass
     elif (opc == 3): #busca um aluno por id e apresenta seus dados se existir
+        aluno = buscar_aluno_por_id(buscar_todos_alunos_em_arquivo() + alunos)
+        print(aluno)
         pass
     elif (opc == 4):
         #exibe uma lista com todos os alunos filtrados por imc

@@ -31,6 +31,14 @@ def salvar_alunos(alunos):
     novos_alunos = alunos_salvos + alunos # Junta os alunos antigos com os novos
     salvar_alunos_em_arquivo(novos_alunos)
 
+def buscar_aluno_por_id(alunos):
+    id = ler_inteiro("Informe o Id do aluno desejado: ", True)
+    for aluno in alunos:
+        if(aluno['id'] == id): return aluno
+    return f"Aluno com o id: {id} não encontrado"
+    
+
+
 def buscar_id_ultimo_aluno(alunos):
     try:
         ultimo_aluno = alunos[-1]
