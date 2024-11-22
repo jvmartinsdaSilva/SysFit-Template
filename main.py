@@ -28,8 +28,9 @@ while True:
         aluno = buscar_aluno_por_id(buscar_todos_alunos_em_arquivo() + alunos)
         print(aluno)
         pass
-    elif (opc == 4):
-        #exibe uma lista com todos os alunos filtrados por imc
+    elif (opc == 4): #exibe uma lista com todos os alunos filtrados por imc
+        aluno = buscar_aluno_por_IMC(buscar_todos_alunos_em_arquivo() + alunos)
+        print(aluno)
         pass
     elif (opc == 5):
         salvar_alunos(alunos)

@@ -38,6 +38,12 @@ def buscar_aluno_por_id(alunos):
     return f"Aluno com o id: {id} não encontrado"
     
 
+def buscar_aluno_por_IMC(alunos):
+    imc = ler_real("Informe o valor do IMC desejado", True)
+    for aluno in alunos:
+        if(aluno['IMC'] == imc): return aluno
+    return f"Aluno com o IMC: {imc} não encontrado"
+
 
 def buscar_id_ultimo_aluno(alunos):
     try:
